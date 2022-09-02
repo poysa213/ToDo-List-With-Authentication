@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>To-Do List</title>
+    <style>
+      body {
+        background-color: whitesmoke;
+        font-family: "Poppins", sans-serif;
+        padding: 55px 0;
+        color: rgb(40, 36, 36);
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background-color: azure;
+        box-shadow: 3px 3px 15px -5px rgb(180, 156, 156);
+      }
+      .header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: aliceblue;
+        padding: 15px;
+        border-radius: 5px 5px 0 0;
+        background-color: blueviolet;
+      }
+
+      .header-bar a {
+        color: aliceblue;
+        text-decoration: none;
+      }
+      .task-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-between;
+        background-color: aliceblue;
+        border-top: 1px solid white;
+      }
+      .task-title {
+        display: flex;
+      }
+      .task-title a {
+        text-decoration: none;
+        color: gray;
+        margin-left: 10px;
+      }
+      .task-complete-icon {
+        height: 20px;
+        width: 20px;
+        background-color: greenyellow;
+        border-radius: 50%;
+      }
+      .task-incomplete-icon {
+        height: 20px;
+        width: 20px;
+        background-color: black;
+        border-radius: 50%;
+      }
+      .delete-link {
+        text-decoration: none;
+        font-weight: 900;
+        color: red;
+        font-size: 22px;
+        line-height: 0;
+      }
+      .search-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      #add-link {
+        color: rgb(237, 98, 98);
+        text-decoration: none;
+        text-shadow: 1px 1px brown;
+        font-size: 42px;
+      }
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+      }
+      label {
+        padding-top: 10px;
+        display: block;
+      }
+      .btn {
+        border: 1px solid red;
+        background-color: white;
+        color: red;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .card-body {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">{% block content %} {% endblock %}</div>
+  </body>
+</html>
